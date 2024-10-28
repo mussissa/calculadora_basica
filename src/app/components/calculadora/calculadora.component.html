@@ -1,0 +1,22 @@
+<div class="calculadora">
+ 
+  <div class="calculadora-title">
+     <span>Calculadora</span>
+  </div>
+  <div class="calculadora-label">
+    <label>{{valor}}</label>
+  </div>
+
+  <div class="calculadora-prim-botons">
+    <button   (click) = "operacao(butoesI)" *ngFor="let butoesI of botoes | slice:0:12" >{{butoesI}}</button>
+  </div>
+
+  <div class="calculadora-ult-botons">
+    <div class="ultimos">
+      <button (click) = "operacao(butoesF)" *ngFor="let butoesF of botoes | slice:-7:-1">{{butoesF}}</button>   
+    </div>
+    <div class="calculadora-botao-somar">
+      <button (click)="operacao(butaoMais)" *ngFor="let butaoMais of botoes |slice:-1" >{{butaoMais}}</button>
+    </div>
+  </div>
+</div>
